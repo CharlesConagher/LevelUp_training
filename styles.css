@@ -1,0 +1,584 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Rubik, sans-serif;
+    font-size: 12px;
+    color: #616161;
+}
+
+section {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    min-width: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #7f7f7f;
+}
+
+span {
+    color: #b761ba;
+}
+
+p {
+    margin: 0;
+}
+
+/*Header Tags*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    background: #b761ba;
+}
+
+.header__logo {
+    width: 60px;
+    height: 80px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-list__item {
+    display: block;
+    margin: 20px;
+}
+
+.nav-list__link {
+    font-family: Raleway, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+
+.nav-list__link:hover {
+    color: #ffffff;
+}
+/*---------------------*/
+/*Promo Tags*/
+
+.promo {
+    position: relative;
+    background: url("img/vitamins_foto.jpeg") center no-repeat;
+    background-size: cover;
+}
+
+.promo:after {
+    content: "";
+    display: block;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.promo__item {
+    margin-top: 50px;
+    padding: 20px;
+    border: 5px solid #b761ba;
+    border-radius: 10px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 00%, rgba(183,97,186,0.5) 70%);
+    z-index: 2;
+}
+
+.promo__item-img {
+    transform: scale(0.8);
+}
+
+.promo__item-features {
+    max-width: 500px;
+    font-family: Rubik, sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+}
+
+.promo__item-feature {
+    padding: 5px;
+}
+
+.promo__item-feature span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.promo__video {
+    position: absolute;
+    height: 100%;
+}
+
+.promo__video-media {
+    top: 0;
+    left: 0;
+    height: auto;
+    z-index: 0;
+}
+
+/*---------------------------*/
+/*Composition tags*/
+
+.composition {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 00%, rgba(183,97,186,0.5) 70%);
+}
+
+.composition__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-areas:
+            "grid-item1 empty-grid1 grid-item5"
+            "grid-item2 grid-item4 grid-item6"
+            "grid-item3 grid-button grid-item7";
+    margin: 50px 0;
+}
+
+.composition__grid-item {
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    align-self: center;
+}
+
+.grid-item1 {
+    grid-area: grid-item1;
+}
+
+.grid-item2 {
+    grid-area: grid-item2;
+}
+
+.grid-item3 {
+    grid-area: grid-item3;
+}
+
+.grid-item4 {
+    grid-area: grid-item4;
+    width: 400px;
+    height: 400px;
+}
+
+.grid-item4__img{
+    transform: scale(0.8);
+}
+
+.grid-item5 {
+    grid-area: grid-item5;
+}
+
+.grid-item6 {
+    grid-area: grid-item6;
+}
+
+.grid-item7 {
+    grid-area: grid-item7;
+}
+
+.empty-grid1 {
+    grid-area: empty-grid1;
+    content: "";
+}
+
+.grid-button {
+    grid-area: grid-button;
+    justify-self: center;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.grid-item__img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #b761ba;
+    border-radius: 100px;
+}
+
+.grid-item__name {
+    font-family: Rubik, sans-serif;
+    font-size: 20px;
+    line-height: 17px;
+    letter-spacing: 0.08em;
+}
+
+/*----------------------------*/
+/*Reviews tags*/
+
+.reviews__slider {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.reviews__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #b761ba;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.reviews__item-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews__item-avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.reviews__item-comment {
+    max-width: 500px;
+    font-family: Rubik, sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.08em;
+}
+/*----------------------------*/
+/*Products tags*/
+
+.products {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(183,97,186,0.5018382352941176) 50%, rgba(255,255,255,1) 100%);
+}
+
+.products__content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.products__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    position: relative;
+    margin: 0 20px;
+    padding: 20px;
+    border: 5px solid #b761ba;
+    border-radius: 50px;
+}
+
+.products__item-pills {
+    position: absolute;
+    width: 100px;
+    height: 130px;
+    top: 140px;
+    left: 50px;
+}
+
+.products__item-name {
+    font-family: Rubik, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0.005em;
+    margin: 0;
+}
+
+.products__item-desc {
+    font-family: Raleway, sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.08em;
+}
+
+.products__item-feature {
+    list-style: circle;
+    text-align: left;
+    font-family: Rubik, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}
+/*-----------------------------*/
+/*Order tags*/
+
+.order {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(183,97,186,0.5018382352941176) 50%, rgba(255,255,255,1) 100%);
+}
+
+.order__timer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.order__timer-name {
+    font-family: Rubik, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.timer__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer__content-item {
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+.timer__content-val {
+    font-size: 40px;
+    color: #b761ba;
+}
+
+.timer__content-separator {
+    margin: 0 20px;
+    font-size: 40px;
+    color: #000000;
+}
+
+.order__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.order__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 50px;
+}
+
+.order__form-item {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    text-align: left;
+    font-family: Rubik, sans-serif;
+    font-size: 20px;
+}
+
+.order__form-input {
+    width: 300px;
+    height: 30px;
+    font-family: Raleway, sans-serif;
+    font-size: 15px;
+    border: 5px solid #b761ba;
+    border-radius: 10px;
+}
+
+.order__preicelist-pills {
+    height: 200px;
+    width: auto;
+}
+
+.order__pricelist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order__pricelist-newprice {
+    font-family: Raleway, sans-serif;
+    font-size: 40px;
+    animation: colorSwitch 2s infinite;
+    color: #b761ba;
+}
+
+@keyframes colorSwitch {
+    0% {
+        color: #b761ba;
+    }
+
+    50% {
+        color: #ffe938;
+    }
+
+    100% {
+        color: #b761ba;
+    }
+}
+
+.order__pricelist-oldprice {
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #000000;
+}
+
+/*----------------------------*/
+.section__header {
+    font-family: Rubik, sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    z-index: 2;
+}
+
+.section__desc {
+    align-self: center;
+    max-width: 500px;
+    font-family: Rubik, sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.08em;
+    margin: 20px 0;
+    color: #7f7f7f;
+    z-index: 2;
+}
+
+.orderNow-button {
+    display: inline-block;
+    padding: 14px 35px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Raleway, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    background-color: #b761ba;
+    color: #FCFDFE;
+    transition: background-color 0.5s ease 0s;
+}
+
+.orderNow-button:hover {
+    background-color: #871b89;
+}
+
+/*Slider tags*/
+
+.slick-list {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-arrow {
+    font-size: 0;
+    width: 200px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.5s ease 0s;
+}
+
+.slick-arrow:hover {
+    background-color: #871b89;
+}
+
+.slick-prev {
+    background: url("img/left_arrow.svg") #b761ba center no-repeat;
+}
+
+.slick-next {
+    background: url("img/right_arrow.svg") #b761ba center no-repeat;
+}
+
+@media (max-width: 769px) {
+    .products__content {
+        flex-direction: column;
+    }
+    .products__item {
+        margin: 20px;
+    }
+
+    .reviews__slider {
+        max-width: 600px;
+    }
+
+    .reviews__item {
+        width: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+    .order__form-input {
+        width: auto;
+    }
+
+    .reviews__slider {
+        max-width: 370px;
+    }
+
+    .products__item {
+        transform: scale(0.9);
+    }
+
+    .composition__grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+    .reviews__slider {
+        max-width: 300px;
+    }
+
+    .products__item {
+        transform: scale(0.8);
+    }
+
+    .order__content {
+        flex-direction: column;
+    }
+
+    .order__form {
+        margin: 50px;
+        align-items: center;
+    }
+
+    .order__form-item {
+        text-align: center;
+    }
+}
